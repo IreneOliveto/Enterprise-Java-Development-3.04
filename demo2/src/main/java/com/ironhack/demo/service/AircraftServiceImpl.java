@@ -11,7 +11,7 @@ import java.util.List;
 public class AircraftServiceImpl implements AircraftService {
 
     @Autowired
-    AircraftRepository aircraftRepository;
+    private AircraftRepository aircraftRepository;
 
     @Override
     public List<Aircraft> findAll() {

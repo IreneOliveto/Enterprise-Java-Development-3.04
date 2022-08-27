@@ -19,6 +19,7 @@ class AircraftRepositoryTest {
         aircraftRepository.deleteAll();
     }
 
+    // 5. Write tests to verify your ability to create new customers.
     @Test
     public void whenSavingAircraft_shouldCreateNewAircraft() {
     Aircraft aircraft = new Aircraft(3456, "Boeing3524", 200);
@@ -26,6 +27,12 @@ class AircraftRepositoryTest {
     aircraftRepository.save(aircraft);
 
     assertTrue(aircraftRepository.existsById(3456));
+    }
+
+    // 10. Write tests to verify your ability to find aircraft with names containing “Boeing”.
+    @Test
+    public void whenSearchingAircraft_shouldFindAircraftContainingBoeing() {
+
     }
 
 }

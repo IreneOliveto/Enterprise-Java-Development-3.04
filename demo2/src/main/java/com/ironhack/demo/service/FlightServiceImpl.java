@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class FlightServiceImpl implements FlightService {
     @Autowired
-    FlightRepository flightRepository;
+    private FlightRepository flightRepository;
     @Override
     public List<Flight> findAll() {
         return flightRepository.findAll();

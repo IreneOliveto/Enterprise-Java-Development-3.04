@@ -19,13 +19,23 @@ class FlightRepositoryTest {
         flightRepository.deleteAll();
     }
 
+    // 6. Write tests to verify your ability to create new customers.
     @Test
     public void whenSavingFlight_shouldCreateNewFlight() {
-        Flight flight = new Flight("2345", 9000, 1234 );
+        Flight flight = new Flight("DL122", 9000, 1 );
 
         flightRepository.save(flight);
 
-        assertTrue(flightRepository.existsById(1234));
+        assertTrue(flightRepository.existsById("DL122"));
     }
 
+    //9. Write tests to verify your ability to find flights by flight number.
+   @Test
+   public void whenSearchingFlight_shouldFindFlightByFlightNumber() {
+    Flight flight = new Flight("DL143", 9000, 2 );
+
+    flightRepository.save(flight);
+
+    assertEquals(flight.getFlightNumber(), "DL143");
+   }
 }
